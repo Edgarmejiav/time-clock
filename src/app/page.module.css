@@ -14,6 +14,16 @@
     color: white;
 }
 
+.button {
+    border: none;
+    background: transparent;
+/*    posion derecha superiro */
+    position: absolute;
+    margin: 2rem;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
 @media screen and  (max-width: 768px) {
     .main {
         padding: 2rem;

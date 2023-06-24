@@ -2,6 +2,13 @@
 
 import styles from './page.module.css'
 import React, {useEffect, useState} from 'react'
+import {Anybody} from 'next/font/google'
+import {FullScreentsx} from "@/app/FullScreen";
+
+const tourney = Anybody({
+    weight: ["900"],
+    subsets: ['latin']
+})
 
 export const TimeClock = () => {
     const [timeCurrent, setTimeCurrent] = useState("")
@@ -23,9 +30,14 @@ export const TimeClock = () => {
             clearInterval(interval);
         };
     }, []);
+
     return (
-        <div className={styles.timeClock}>
-            <h1>{timeCurrent}</h1>
-        </div>
+        <>
+                <div className={styles.timeClock}>
+                    <h1 className={tourney.className}>{timeCurrent}</h1>
+                </div>
+
+            <FullScreentsx/>
+        </>
     )
 }
