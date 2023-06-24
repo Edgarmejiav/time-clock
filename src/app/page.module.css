@@ -13,3 +13,13 @@
     font-weight: 900;
     color: white;
 }
+
+@media screen and  (max-width: 768px) {
+    .main {
+        padding: 2rem;
+    }
+
+    .timeClock {
+        font-size: 30px;
+    }
+}
