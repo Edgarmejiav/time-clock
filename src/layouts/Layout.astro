@@ -1,44 +1,75 @@
 ---
 interface Props {
-	title: string;
+    title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Ramabhadra&display=swap" rel="stylesheet">
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Astro description"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="title" content="Online Clock: The Exact Time on Your Screen! Easy to Use, Free!">
+    <meta name="description"
+          content="Digital clock: the exact time with seconds filling the entire screen. Switch between digital or analog format, night mode.">
+    <meta name="keywords"
+          content="online clock, digital clock, free clock, clock with seconds, analog clock, night mode, accurate time, time display">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Online Clock: The Exact Time on Your Screen! Easy to Use, Free!">
+    <meta property="og:description"
+          content="Digital clock with accurate time down to the second, filling your screen. Switch between digital or analog format, and activate night mode.">
+    <meta property="og:image" content="URL_to_image">
+    <meta property="og:url" content="URL_of_your_page">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Online Clock: The Exact Time on Your Screen! Easy to Use, Free!">
+    <meta name="twitter:description"
+          content="Digital clock with accurate time, filling your screen. Switch formats between digital/analog and night mode.">
+    <meta name="twitter:image" content="URL_to_image">
+    <meta name="twitter:site" content="@your_twitter_handle">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Ramabhadra&display=swap" rel="stylesheet">
+    <title>{title}</title>
+</head>
+<body>
+<slot/>
+</body>
 </html>
 <style is:global>
 
-	html {
-		font-family: system-ui, sans-serif;
-		background: #000000;
-	}
+    html {
+        font-family: system-ui, sans-serif;
+        background: #000000;
+    }
 
-	@font-face {
-		font-family: 'cunia';
-		src: url('/Cunia.ttf') format('opentype');
-		font-weight: normal;
-		font-style: normal;
-	}
-
-
+    @font-face {
+        font-family: 'cunia';
+        src: url('/Cunia.ttf') format('opentype');
+        font-weight: normal;
+        font-style: normal;
+    }
 
 
 </style>
+<!-- Structured Data (JSON-LD) -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Online Clock",
+        "url": "https://timeclock.vercel.app/",
+        "description": "A digital and analog clock providing exact time with seconds. Available in night mode, easy to use, and free.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "legamejiav"
+        }
+    }
+</script>

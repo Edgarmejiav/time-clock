@@ -1,54 +1,63 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+<div align="center">
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+<img src="https://avatars.githubusercontent.com/u/35704346?v=4"  style="margin-top: 50px" height="90px" width="auto" /> 
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+<h2>
+    <em>Time clock</em> 
+</h2>
+<p>
+Online Clock: The Exact Time on Your Screen! Easy to Use, Free!</p>
 
-## 🚀 Project Structure
+</div>
 
-Inside of your Astro project, you'll see the following folders and files:
+<div align="center">
+    <a href="#🚀-empezar">
+        Empezar
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#🧞-comandos">
+        Comandos
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#🔑-licencia">
+        Licencia
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="https://edgarmejiav.vercel.app/">
+        Personal
+    </a>
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+</div>
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+<p></p>
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+<div align="center">
 
-Any static assets, like images, can be placed in the `public/` directory.
+![GitHub stars](https://img.shields.io/github/stars/Edgarmejiav/time-clock)
+![GitHub issues](https://img.shields.io/github/issues/Edgarmejiav/time-clock)
+![GitHub forks](https://img.shields.io/github/forks/Edgarmejiav/time-clock)
+![GitHub PRs](https://img.shields.io/github/issues-pr/Edgarmejiav/time-clock)
 
-## 🧞 Commands
+</div>
 
-All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🚀 Empezar
 
-## 👀 Want to learn more?
+1. Abre [**http://localhost:3000**](http://localhost:3000/) en tu navegador para ver el resultado 🚀
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## 🧞 Comandos
+|     | Comando          | Acción                                        |
+| :-- | :--------------- | :-------------------------------------------- |
+| ⚙️  | `dev`            | Lanza un servidor de desarrollo local en `localhost:3000`.  |
+| ⚙️  | `build`          | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`.      |
+| ⚙️  | `start`          | Inicia la aplicación en un entorno de producción. |
+| ⚙️  | `lint`           | Ejecuta un análisis estático en el código para encontrar problemas de estilo y posibles errores. |
+
+
+
+## 🔑 Licencia
+
+[MIT](LICENSE.txt) - Creado por [**EdgarMejiav**](https://edgarmejiav.vercel.app/).
