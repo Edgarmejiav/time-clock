@@ -3,23 +3,32 @@ import FullScreen from "./FullScreen.astro";
 ---
 <div class="absolute right-0 m-6">
 
-<FullScreen></FullScreen>
+    <FullScreen></FullScreen>
 </div>
+
 <div class="
 select-none
     h-screen flex items-center justify-center
     text-white ">
 
     <div id="timeClock" class="gap-10  flex md:flex-row flex-col md:text-[350px] text-9xl items-center">
-        <span class="md:h-[500px] h-auto flex items-center justify-center bg-[#0F0F0F] px-10 rounded-2xl relative">
-                <span class="md:text-2xl text-sm absolute top-3 md:top-10 left-3 md:left-10 ">AM</span>
-                <span id="hour" class=" md:"></span>
-        </span>
+        <div class="md:h-[450px] w-[450px] h-auto flex items-center justify-center bg-[#0F0F0F] px-10 rounded-2xl relative">
+            <div id="date" class="md:text-2xl text-sm w-auto absolute top-3 transform translate-y-1/2"></div>
+            <div class="bg-gray-950 absolute w-[-webkit-fill-available] h-1.5  z-10 "></div>
+            <div id="hour" class=" ">
+            </div>
+            <div class=" md:text-4xl  text-sm  absolute md:bottom-10  bottom-3  md:left-10 left-3 ">AM</div>
 
-        <span class="md:h-[500px] h-auto flex items-center justify-center bg-[#0F0F0F] px-10  rounded-3xl  relative">
-        <span id="min"></span>
-        <span class=" md:text-6xl  text-sm  absolute md:bottom-10  bottom-3  md:right-10 right-3 " id="sec"></span>
-        </span>
+        </div>
+
+        <div class="md:h-[450px] w-[450px] h-auto flex items-center justify-center bg-[#0F0F0F] px-10  rounded-3xl  relative">
+            <div id="day" class="md:text-2xl text-sm w-auto absolute top-3 transform translate-y-1/2"></div>
+
+            <div class="bg-gray-950 absolute w-[-webkit-fill-available] h-1.5  z-10 "></div>
+
+            <div id="min"></div>
+            <div class=" md:text-4xl  text-sm  absolute md:bottom-10  bottom-3  md:right-10 right-3 " id="sec"></div>
+        </div>
     </div>
 </div>
 
@@ -28,6 +37,16 @@ select-none
     let hourCurrent = document.getElementById("hour");
     let minCurrent = document.getElementById("min");
     let secCurrent = document.getElementById("sec");
+    let dateElement = document.getElementById("date");
+    let dayElement = document.getElementById("day");
+    if (dateElement && dayElement) {
+        let currentDate = new Date();
+        dateElement.textContent = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()}`;
+
+        let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        dayElement.textContent = daysOfWeek[currentDate.getDay()];
+    }
+
 
     function updateTime() {
         const time = new Date();
