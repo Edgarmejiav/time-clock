@@ -17,15 +17,38 @@
         </svg>
     </button>
 </div>
-
 <script>
     const fullscreenBtn = document.getElementById('fullscreenBtn');
     const exitFullscreenBtn = document.getElementById('exitFullscreenBtn');
+    let wakeLock:any = null;
+
     if (!fullscreenBtn || !exitFullscreenBtn) {
         throw new Error('This browser does not support fullscreen mode');
     }
 
-    fullscreenBtn.addEventListener('click', () => {
+    // Función para solicitar el Wake Lock
+    async function requestWakeLock() {
+        try {
+            wakeLock = await navigator.wakeLock.request('screen');
+        } catch (err) {
+            console.error('Wake Lock error: ', err);
+        }
+    }
+
+    // Función para liberar el Wake Lock
+    function releaseWakeLock() {
+        if (wakeLock) {
+            wakeLock.release();
+            wakeLock = null;
+        }
+    }
+
+    // Solicitar Wake Lock cuando se carga la página
+    window.addEventListener('load', () => {
+        requestWakeLock();
+    });
+
+    fullscreenBtn.addEventListener('click', async () => {
         const doc = document.documentElement;
 
         if (doc.requestFullscreen) {
@@ -52,7 +75,13 @@
         } else if ((document as any).msExitFullscreen) { // IE/Edge
             (document as any).msExitFullscreen();
         }
+
         fullscreenBtn.style.display = 'inline';
         exitFullscreenBtn.style.display = 'none';
+    });
+
+    // Liberar el Wake Lock cuando se cierra la página
+    window.addEventListener('beforeunload', () => {
+        releaseWakeLock();
     });
 </script>
