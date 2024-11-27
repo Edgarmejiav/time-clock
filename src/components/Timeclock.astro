@@ -3,18 +3,16 @@
 <div class="
     h-screen flex items-center justify-center
     text-white ">
-    <div id="timeClock" class="gap-10 flex text-[350px] items-center">
-        <span class="linee border-t-2 border-black w-full"></span>
-        <span class="bg-[#0F0F0F] px-10    rounded-3xl  relative">
-                <span class="text-2xl absolute top-10 left-10 ">AM</span>
-                <span id="hour" class=""></span>
+    <div id="timeClock" class="gap-10  flex md:flex-row flex-col md:text-[350px] text-9xl items-center">
+        <span class="md:h-[500px] h-auto flex items-center justify-center bg-[#0F0F0F] px-10 rounded-2xl relative">
+                <span class="md:text-2xl text-sm absolute top-3 md:top-10 left-3 md:left-10 ">AM</span>
+                <span id="hour" class=" md:"></span>
         </span>
 
-        <span class="bg-[#0F0F0F] px-10  rounded-3xl  relative">
+        <span class="md:h-[500px] h-auto flex items-center justify-center bg-[#0F0F0F] px-10  rounded-3xl  relative">
         <span id="min"></span>
-        <span class=" text-6xl   absolute bottom-10 right-10 " id="sec"></span>
+        <span class=" md:text-6xl  text-sm  absolute md:bottom-10  bottom-3  md:right-10 right-3 " id="sec"></span>
         </span>
-
     </div>
 </div>
 
