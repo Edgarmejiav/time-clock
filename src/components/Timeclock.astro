@@ -1,0 +1,54 @@
+---
+---
+<div class="
+    h-screen flex items-center justify-center
+    text-white ">
+    <div id="timeClock" class="gap-10 flex text-[350px] items-center">
+        <span class="linee border-t-2 border-black w-full"></span>
+        <span class="bg-[#0F0F0F] px-10    rounded-3xl  relative">
+                <span class="text-2xl absolute top-10 left-10 ">AM</span>
+                <span id="hour" class=""></span>
+        </span>
+
+        <span class="bg-[#0F0F0F] px-10  rounded-3xl  relative">
+        <span id="min"></span>
+        <span class=" text-6xl   absolute bottom-10 right-10 " id="sec"></span>
+        </span>
+
+    </div>
+</div>
+
+<script>
+    // let timeCurrent = document.getElementById("timeClock");
+    let hourCurrent = document.getElementById("hour");
+    let minCurrent = document.getElementById("min");
+    let secCurrent = document.getElementById("sec");
+
+    function updateTime() {
+        const time = new Date();
+        const hours = time.getHours();
+        const minutes = time.getMinutes();
+        const seconds = time.getSeconds();
+
+        const formattedHours = hours < 10 ? `0${hours}` : hours;
+        const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+        const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+        if (hourCurrent && minCurrent && secCurrent) {
+            hourCurrent.innerText = `${formattedHours}`;
+            minCurrent.innerText = `${formattedMinutes}`;
+            secCurrent.innerText = `${formattedSeconds}`;
+        }
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+</script>
+
+<style>
+    #timeClock {
+        font-family: "cunia", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+</style>
